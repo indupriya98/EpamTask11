@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <title> Sign in</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+      function check ()
+        {
+            var checked=true;
+            var f_name = document.registration.fname.value;
+
+            var l_name = document.registration.lname.value;
+            
+            var mail_id = document.registration.email_.value;
+            
+            var phno = document.registration.phone_.value;
+            
+            var date = document.registration.date_.value;
+            
+            var pwd = document.registration.pwd_.value;
+            
+            
+            if(f_name==""){
+                window.alert("Please enter a valid name");
+                checked=false;   
+            }
+            else if(f_name.length<6||f_name.length>14){
+                window.alert("Please enter the name between 6 and 14 characters");
+                checked=false;
+            }
+            if(l_name==""){
+                window.alert("Please enter a valid name");
+                checked=false;   
+            }
+            else if(l_name.length<6||l_name.length>14){
+                window.alert("Please enter the name between 6 and 14 characters");
+                checked=false;
+            }
+            if(mail_id==""){
+                window.alert("Please enter a valid email-id");
+                checked=false;
+            }
+            if(phno==""||phno.length<10){
+                window.alert("Please enter a valid phone number");
+                checked=false;
+            }
+            if(date==""){
+                window.alert("Please enter a valid date of birth");
+                checked=false;
+            }
+            if(pwd.length==0||pwd.length<6||pwd.length>14){
+                window.alert("Password must contain 6-14 characters");
+                checked=false;
+            }
+            if(checked){
+                window.alert("Registered Successfully!");
+            }
+            else{
+                window.alert("Please enter valid details for successful registration");
+            }
+            
+        }
+
+  </script>
+</head>
+<body>
+        <div class="container" align ="center">
+            
+              <p>REGISTRATION FORM</p>
+                        
+                        <form name="registration" method="post">
+                                <input type="text" name = "fname" placeholder="First Name">
+                                </input>
+                                <p id="p1"></p>
+                                <br>
+                                <input type="text" name = "lname"  placeholder="Last Name">
+                                </input>
+                                <br>
+                                <br>
+                                <input type="text" name= "date_"  placeholder="dd-mm-yyyy">
+                                <i class="glyphicon glyphicon-calendar form-control-feedback"></i>
+                                </input>
+                                <br>
+                                <br>
+                                <input type="email" name="email_"  placeholder="mail@example.com">
+                                    <i class="glyphicon glyphicon-envelope form-control-feedback"></i>
+                                </input>
+                                <br>
+                                <br>
+                                <input type="password" name= "pwd_"  placeholder="password">
+                                    <i class="glyphicon glyphicon-lock form-control-feedback"></i>
+                                </input>
+                                <br>
+                                <br>
+                                <input type="tel" name= "phone_"  placeholder="+91-9xxxxxxxxx">
+                                    <i class="glyphicon glyphicon-phone form-control-feedback"></i>
+                                </input>
+                                <br>
+                                <br>
+                                <b>
+                                    <input type="submit"  onclick = "return check()"value=" REGISTER NOW!" style="background-color:darkturquoise; color:white">
+                                </b>
+                            </div>
+                            
+                        </div>
+                  </form>
+        </div>
+        
+                
+          
+        
+    </body>
